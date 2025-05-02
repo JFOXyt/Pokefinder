@@ -22,8 +22,8 @@ def pokefinder():
     op = pokeentry.get().lower().strip()
 
     response = requests.get(f'https://pokeapi.co/api/v2/pokemon/{op}')
-    
 
+    
     if response.status_code==200 and op!='':
 
         url = response.json()
@@ -90,9 +90,6 @@ def pokefinder():
                 descriptt.place(x=315,y=250)
             except:
                 pass
-            print(responsedescript.status_code)
-
-            
 
         responseimg = requests.get(urlimg.format(id=idpoke))
 
@@ -107,11 +104,9 @@ def pokefinder():
             image_label.image = image
             image_label.place(x=325,y=140)
 
-
         else:
             image_label.config(image='')
                 
-
     else:
         tkinter.messagebox.showerror(title='ERROR',message='Check if your connected to wifi or if you entered a name of a real pokemon')
 
