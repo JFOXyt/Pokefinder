@@ -1,13 +1,13 @@
 import requests,tkinter,tkinter.messagebox
-from tkinter.messagebox import showerror
-from tkinter import font,PhotoImage,messagebox,ttk
+from tkinter import PhotoImage,ttk
 
 root=tkinter.Tk()
 root.geometry('500x400')
 root.resizable(False,False)
 root.title('Pokefinder')
-icon=tkinter.PhotoImage(file='icon.png')
-root.iconphoto(False,icon)
+icon=tkinter.PhotoImage(file='C:\\Users\\Administrator\\Desktop\scripts py\\pokefinder\\icon.png')
+icons=root.iconphoto(False,icon)
+
 
 result_labels = []
 
@@ -279,10 +279,10 @@ style.theme_use('vista')
 frametop=tkinter.Frame(root,background='gray',height=75,width=1000)
 frametop.place(x=0,y=0)
 
-imagepoke = PhotoImage(file="pokemonimage.png")
+imagepoke = PhotoImage(file="C:\\Users\\Administrator\\Desktop\\scripts py\\pokefinder\\pokemonimage.png")
 
 image_labelpoke = tkinter.Label(root, image=imagepoke,bg='gray')
-image_labelpoke.image = imagepoke
+image_labelpoke.imagepoke = imagepoke
 image_labelpoke.place(x=25,y=10)
 
 finder=tkinter.Label(root,text='FINDER',bg='gray',font=('Pokemon Solid',18,'bold'),fg='yellow')
@@ -294,7 +294,7 @@ namepokeentry.place(x=25,y=100,height=30,width=140)
 idpokeentry=ttk.Entry(root)
 idpokeentry.place(x=175,y=100,height=30,width=140)
 
-img_button=tkinter.PhotoImage(file='butao.gif').subsample(11,11)
+img_button=tkinter.PhotoImage(file='C:\\Users\\Administrator\\Desktop\\scripts py\\pokefinder\\butao.gif').subsample(11,11)
 
 pesquisarbuton=tkinter.Button(root,image=img_button,command=lambda: [pokefinder(),clearentry()],cursor='hand2',border=0,bg='white')
 pesquisarbuton.place(x=320,y=95)
